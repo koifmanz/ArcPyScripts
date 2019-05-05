@@ -3,6 +3,8 @@ import arcpy
 
 pipes_lyr = arcpy.GetParameterAsText(0)  # line feature class
 split_method = arcpy.GetParameterAsText(1)  # string
+label_field = arcpy.GetParameterAsText(2) # field  for labeling and status, from pipes_lyr
+Q_Rate = arcpy.GetParameterAsText(3) # Discharge field field from pipes_lyr
 
 
 def Split_Style(way):
@@ -59,7 +61,7 @@ def Get_direction(n):
         return n / abs(n)
 
 
-data_fields = ["NOTES", "Q"] + fields_list
+data_fields = [label_field, Q_Rate] + fields_list
 arcpy.SetProgressorPosition(25)
 # main loop
 with arcpy.da.UpdateCursor(pipes_lyr, data_fields) as cursor:
