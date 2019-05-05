@@ -1,3 +1,3 @@
 # ArcPyScripts
 
-Collection of little tools for end users at work
+Collection of small tools for end users at work
