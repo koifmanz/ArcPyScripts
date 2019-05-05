@@ -1,5 +1,4 @@
-#!/usr/bin/env python
-# -*- coding: Windows-1255 -*-
+# -*- coding: utf-8 -*-
 
 from arcpy import GetParameterAsText
 import pandas as pd
